@@ -15,7 +15,7 @@ It interacts directly with real application binaries: inspecting control trees, 
 
 Here is an automated E2E test running against a WinForms sample application inside Linux (Xvfb + Wine), handling dialogs, typing text, and updating a data grid:
 
-<video src="docs/winforms_e2e.mp4" controls width="100%"></video>
+▶ **[Watch the demo video (MP4)](docs/winforms_e2e.mp4?raw=1)**
 
 ### E2E Execution Flow
 
