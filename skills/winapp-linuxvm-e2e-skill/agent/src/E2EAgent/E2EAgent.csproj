@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- net6.0-windows: loadable by .NET 6+ runtimes (startup hook). net48: loaded by E2ELauncher (.NET Framework / wine-mono). -->
+    <TargetFrameworks>net6.0-windows;net48</TargetFrameworks>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>E2EAgent</AssemblyName>
+    <NuGetAudit>false</NuGetAudit>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,55 @@
+<Window x:Class="WpfSample.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPF Coverage Sample" Width="620" Height="470" WindowStartupLocation="Manual" Left="20" Top="20" FontFamily="Segoe UI" FontSize="12">
+  <DockPanel>
+    <ToolBarTray DockPanel.Dock="Top">
+      <ToolBar x:Name="tb">
+        <Button x:Name="tbSave" Content="Save" Click="tbSave_Click"/>
+        <ToggleButton x:Name="tglBold" Content="B" Checked="tgl_Changed" Unchecked="tgl_Changed"/>
+      </ToolBar>
+    </ToolBarTray>
+    <StatusBar DockPanel.Dock="Bottom"><StatusBarItem><TextBlock x:Name="lblStatus" Text="-"/></StatusBarItem></StatusBar>
+    <Grid Margin="10">
+      <Grid.ColumnDefinitions><ColumnDefinition Width="300"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+      <Grid.RowDefinitions><RowDefinition Height="200"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+
+      <TabControl x:Name="tabs" Grid.Row="0" Grid.Column="0" SelectionChanged="tabs_Changed">
+        <TabItem x:Name="tabTree" Header="ツリー">
+          <TreeView x:Name="tv" SelectedItemChanged="tv_Changed">
+            <TreeViewItem x:Name="tvRoot" Header="ルート" IsExpanded="True">
+              <TreeViewItem Header="子1"/><TreeViewItem Header="子2"/>
+            </TreeViewItem>
+          </TreeView>
+        </TabItem>
+        <TabItem x:Name="tabInput" Header="入力">
+          <StackPanel Margin="6">
+            <!-- FontFamily is explicit on purpose: under Wine a PasswordBox whose font is only resolved through Wine's font
+                 replacement crashes the app when it takes focus (see references/pitfalls.md). -->
+            <PasswordBox x:Name="pwd" FontFamily="Noto Sans CJK JP" Width="180" HorizontalAlignment="Left" PasswordChanged="pwd_Changed"/>
+            <TextBox x:Name="tbMulti" Width="180" Height="50" Margin="0,6,0,0" HorizontalAlignment="Left" AcceptsReturn="True" TextWrapping="Wrap" TextChanged="multi_Changed"/>
+            <ComboBox x:Name="cbEdit" Width="180" Margin="0,6,0,0" HorizontalAlignment="Left" IsEditable="True"/>
+            <DatePicker x:Name="dp" Width="180" Margin="0,6,0,0" HorizontalAlignment="Left" SelectedDateChanged="dp_Changed"/>
+          </StackPanel>
+        </TabItem>
+      </TabControl>
+
+      <StackPanel Grid.Row="0" Grid.Column="1" Margin="10,0,0,0">
+        <Slider x:Name="sld" Minimum="0" Maximum="10" Value="3" Width="200" HorizontalAlignment="Left" ValueChanged="sld_Changed"/>
+        <ProgressBar x:Name="pbar" Height="18" Width="200" Margin="0,8,0,0" HorizontalAlignment="Left" Value="40" Maximum="100"/>
+        <Button x:Name="btnPB" Content="+10" Width="60" Margin="0,8,0,0" HorizontalAlignment="Left" Click="btnPB_Click"/>
+        <Expander x:Name="exp" Header="詳細" Margin="0,8,0,0" Expanded="exp_Changed" Collapsed="exp_Changed">
+          <Button x:Name="btnInExpander" Content="inner" Width="80" HorizontalAlignment="Left"/>
+        </Expander>
+      </StackPanel>
+
+      <ListView x:Name="lv" Grid.Row="1" Grid.Column="0" Margin="0,10,0,0" SelectionChanged="lv_Changed">
+        <ListView.View><GridView><GridViewColumn Header="項目" DisplayMemberBinding="{Binding Key}"/><GridViewColumn Header="値" DisplayMemberBinding="{Binding Value}"/></GridView></ListView.View>
+      </ListView>
+
+      <StackPanel Grid.Row="1" Grid.Column="1" Margin="10,10,0,0">
+        <Button x:Name="btnModal" Content="modal" Width="80" HorizontalAlignment="Left" Click="btnModal_Click"/>
+        <RadioButton x:Name="rbA" Content="A" IsChecked="True" Margin="0,8,0,0"/>
+        <RadioButton x:Name="rbB" Content="B" Checked="rb_Changed"/>
+      </StackPanel>
+    </Grid>
+  </DockPanel>
+</Window>

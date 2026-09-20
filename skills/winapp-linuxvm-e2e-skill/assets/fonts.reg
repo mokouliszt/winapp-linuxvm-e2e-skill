@@ -1,0 +1,30 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\FontSubstitutes]
+"MS UI Gothic"="IPAUIGothic"
+"MS Gothic"="IPAGothic"
+"MS PGothic"="IPAPGothic"
+"ＭＳ ゴシック"="IPAGothic"
+"ＭＳ Ｐゴシック"="IPAPGothic"
+"Meiryo"="Noto Sans CJK JP"
+"Meiryo UI"="Noto Sans CJK JP"
+"メイリオ"="Noto Sans CJK JP"
+"Yu Gothic"="Noto Sans CJK JP"
+"Yu Gothic UI"="Noto Sans CJK JP"
+"Segoe UI"="Noto Sans CJK JP"
+"Microsoft Sans Serif"="Noto Sans CJK JP"
+"Tahoma"="Noto Sans CJK JP"
+"MS Shell Dlg"="Noto Sans CJK JP"
+"MS Shell Dlg 2"="Noto Sans CJK JP"
+
+[HKEY_CURRENT_USER\Software\Wine\Fonts\Replacements]
+"Segoe UI"="Noto Sans CJK JP"
+"Meiryo"="Noto Sans CJK JP"
+"Meiryo UI"="Noto Sans CJK JP"
+"Yu Gothic UI"="Noto Sans CJK JP"
+"Yu Gothic"="Noto Sans CJK JP"
+"MS UI Gothic"="IPAUIGothic"
+"MS Gothic"="IPAGothic"
+"MS PGothic"="IPAPGothic"
+"ＭＳ ゴシック"="IPAGothic"
+"ＭＳ Ｐゴシック"="IPAPGothic"

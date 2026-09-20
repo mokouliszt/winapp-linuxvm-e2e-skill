@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+obj/
+bin/
+!skills/winapp-linuxvm-e2e-skill/agent/bin/
+skills/winapp-linuxvm-e2e-skill/agent/src/**/bin/
+skills/winapp-linuxvm-e2e-skill/agent/src/**/obj/
