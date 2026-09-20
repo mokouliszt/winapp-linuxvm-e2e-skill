@@ -15,7 +15,7 @@ Web版・モバイル版Claude（Linuxサンドボックス）上で、**Windows
 
 Linux環境（Xvfb + Wine）上でWinFormsサンプルアプリを起動し、ダイアログ処理や文字入力、グリッド更新を自動実行している様子です。
 
-▶ **[デモ動画を再生（MP4）](docs/winforms_e2e.mp4?raw=1)**
+https://github.com/user-attachments/assets/d940ed1d-abb0-4431-835f-8dfe0ff48c8e
 
 ### テスト実行の流れ（スクリーンショット）
 
